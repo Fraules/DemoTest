@@ -1,0 +1,338 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: Verdana, Geneva, sans-serif;
+    background: url(http://images.vfl.ru/ii/1513151627/86f4810d/19788129.jpg
+    ) no-repeat center top / cover;
+
+}
+
+section, header, footer, nav, div, span, ul, li, a {
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #f2f2f2;
+}
+
+header nav {
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header ul li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+header ul a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #4d4d4d;
+    height: 50px;
+    display: block;
+    position: relative;
+}
+
+header ul a span {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+}
+
+section {
+    float: left;
+    display: block;
+   height: 100%;
+    padding: 75px 0 0 0;
+    margin: 0;
+
+}
+
+#section-section1 {
+    text-align: center;
+    font-size: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+}
+
+.heading {
+    text-align: center;
+    font-size: 15px;
+    color: #2d7890;
+    margin: 300px auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    background-color: #2d7890;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: auto;
+    text-decoration: none;
+    width: 300px;
+    height: 50px;
+    font-size: 15px;
+
+}
+
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple-effect {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5000px;
+    animation: ripple 1s ease forwards;
+    z-index: 1;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(100);
+    }
+}
+#section-section2 {
+    background: #16a085;
+}
+.title {
+    text-align: top;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    letter-spacing: 1px;
+}
+
+h1 {
+    background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    font-size: 120px;
+    line-height: .75;
+    margin: 10px 0;
+}
+/* styling my button */
+
+.white-mode {
+    text-decoration: none;
+    padding: 7px 10px;
+    background-color: #122;
+    border-radius: 3px;
+    color: #FFF;
+    transition: .35s ease-in-out;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+}
+
+.white-mode:hover {
+    background-color: #FFF;
+    color: #122;
+}
+
+#section-section3 {
+    background: #27ae60;
+}
+
+:root {
+    --bg: #eb008c;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrapper {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button {
+    visibility: hidden;
+    position: absolute;
+}
+
+.label {
+    position: absolute;
+    border: 2px solid var(--bg);
+    width: 200px;
+    height: 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.5s all ease;
+    transform: scale(0.8);
+}
+
+.modal {
+    width: 0;
+    height: 0;
+    background: var(--bg);
+    border-radius: 50%;
+    transition: 0.5s all ease;
+    position: relative;
+}
+
+.close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    cursor: pointer;
+    opacity: 0;
+}
+.close:before, .close:after {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 17px;
+    background: white;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
+}
+
+#button:checked ~ .label {
+    background: var(--bg);
+    transition: 0.5s all ease;
+    transform: scale(1);
+}
+#button:checked ~ .modal {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    transition: 0.5s width ease 0.3s, 0.5s height ease 0.3s, 0.5s border-radius ease 0.5s;
+}
+#button:checked ~ .modal .close {
+    opacity: 1;
+    transition: 0.5s all ease 1s;
+}
+
+#section-section4 {
+    background: #c0392b;
+}
+
+.horizon-prev, .horizon-next {
+    position: fixed;
+    top: 50%;
+    margin-top: -24px;
+    z-index: 9999;
+}
+
+.horizon-prev {
+    left: 20px;
+}
+
+.horizon-next {
+    right: 20px;
+}
+
+.smoke {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.smoke ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.smoke ul li {
+    list-style: none;
+    color: #000000;
+    font-size: 6em;
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.smoke ul:hover li {
+    animation: animate 2s linear forwards;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg) translateY(0px);
+        opacity 1;
+        filter: blur(1px);
+    }
+    100% {
+        transform: rotate(45deg) translateY(-200px);
+        opacity: 0;
+        filter: blur(20px);
+    }
+}
+
+.smoke ul li:nth-child(1) {
+    animation-delay: 0s;
+}
+.smoke ul li:nth-child(2) {
+    animation-delay: .4s;
+}
+.smoke ul li:nth-child(3) {
+    animation-delay: .8s;
+}
+.smoke ul li:nth-child(4) {
+    animation-delay: 1s;
+}
+.smoke ul li:nth-child(5) {
+    animation-delay: 1.4s;
+}
+.smoke ul li:nth-child(6) {
+    animation-delay: 1.8s;
+}
+.smoke ul li:nth-child(7) {
+    animation-delay: 2s;
+}
+.smoke ul li:nth-child(8) {
+    animation-delay: 2.4s;
+}
+.smoke ul li:nth-child(9) {
+    animation-delay: 2.8s;
+}
+.smoke ul li:nth-child(10) {
+    animation-delay: 3s;
+}
+
+
