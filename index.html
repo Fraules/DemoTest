@@ -3,10 +3,28 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no, shrink-to-fit=no">
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="jquery-1.10.2.js"></script>
     <script type="text/javascript" src="jquery.touchSwipe.js"></script>
     <script type="text/javascript" src="jquery.horizonScroll.js"></script>
+    <link rel='stylesheet' href='style.css' />
+<link rel='stylesheet' media='(min-width: 1600px)' href='URL_большой.css' />
+<link rel='stylesheet' media='(max-width: 1599px) and (min-width: 800px)' href='URL_средний.css' />
+<link rel='stylesheet' media='(max-width: 799px)' href='URL_маленький_экран.css' />
+    <style>
+    @media (max-width: 930px) { /* это будет показано при разрешении монитора до 930 пикселей */
+  .content-wrapper {padding: 0;} /* основное содержимое занимает всё пространство окна */
+}
+
+@media (max-width: 930px) and (min-width: 470px) {  /* для разрешения экрана от 470 до 930 пикселей */
+  aside {position: static; width: 100%; background: #ccc;} /* боковая колонка смещается согласно расположению в HTML и меняет фон */
+}
+
+@media (max-width: 469px) { /* если максимальное разрешение экрана составит 469 пикселей */
+  body {font: .9em/1em "Helvetica Neue",Arial,Helvetica,sans-serif;} /* меняется шрифт */
+  aside {display: none;} /* боковая колонка исчезает */
+}
+    </style>
 </head>
 <body>
 <header data-role="header" id="header">
@@ -27,58 +45,70 @@
         </ul>
     </nav>
 </header>
+  <!--<div class="horizon-prev"><img src="images/l-arrow.png"></div> 
+    <div class="horizon-next"><img src="images/r-arrow.png"></div>-->
+    <!-- content to be placed inside <body>…</body> -->
+<section data-role="section" id="section-section1" class="section1">
 
-<div class="horizon-prev"><img src="images/l-arrow.png"></div>
-<div class="horizon-next"><img src="images/r-arrow.png"></div>
+   <div class="smoke">
+                    <ul>
+                        <li>D</li>
+                        <li>I</li>
+                        <li>V</li>
+                        <li>I</li>
+                        <li>S</li>
+                        <li>I</li>
+                        <li>O</li>
+                        <li>N</li>
+                    </ul>
+    </div>  
+</div>
 
-<section data-role="section" id="section-section1">
-    <div class="smoke">
-        <ul>
-            <li>D</li>
-            <li>I</li>
-            <li>V</li>
-            <li>I</li>
-            <li>S</li>
-            <li>I</li>
-            <li>O</li>
-            <li>N</li>
-        </ul>
-    </div>
-      <div>
-      <p class="heading"></p>
-            <a href="#" class="ripple btn">ГУД ФРЕШ</a>
-         </div>
-           <script>
-          $(".ripple").on("click",function(event){
-        $(this).append("<span class='ripple-effect'>");
-        $(this).find(".ripple-effect").css({
-            left:event.pageX-$(this).position().left,
-            top:event.pageY-$(this).position().top
-        }).animate({
-            opacity: 0,
-        }, 1500, function() {
-            $(this).remove();
-        });
-            });
-             </script>
+ <label>
+     <div class="loader">Loading…</div>
+</label>
 </section>
 <section data-role="section" id="section-section2">
     <div class="title">
         <h1>THE<br/>FRAAAAAU </h1>
 
 </section>
-<section data-role="section" id="section-section3">
-    <div class="wrapper">
-        <input type="checkbox" id="button">
-        <label for="button" class="label"></label>
-        <div class="modal">
-            <label for="button" class="close"></label>
-        </div>
+<section data-role="section" id="section-section3" class="section3" >
+    <div  class="a-text" >
+            <p><strong>http://play.csssecrets.io/elastic</strong> Quite handy if you need the weight to change and you can even use keyframe animations or transitions with it. <strong>And you can revert to plain old font-weight for any browsers that don't support text-shadow, if you want to.</strong> It won't work with every font but is quite nice with most of the common ones.</p>
     </div>
-
 </section>
-<section data-role="section" id="section-section4">
-    <div class="go-to-2">Go to panel 2 via ID.</div>
+<section data-role="section" id="section-section4" style="text-align: center" class="section4">
+        
+        
+    <div class="btn-1">
+              <a href="#" class="ripple btn">ГУД ФРЕШ
+                  </a>
+
+          </div>
+      
+             <script>
+            $(".ripple").on("click",function(event){
+          $(this).append("<span class='ripple-effect'>");
+          $(this).find(".ripple-effect").css({
+              left:event.pageX-$(this).position().left,
+              top:event.pageY-$(this).position().top
+          }).animate({
+              opacity: 0,
+          }, 1500, function() {
+              $(this).remove();
+          });
+              });
+               </script> 
+    </div>             
+    <div class="path">
+            <img src="http://lea.verou.me/book/adamcatlace.jpg" class="avatar" />
+          
+        </div>
+       
+        <div class="panoramic"></div>    
+         
+        
 </section>
 
 <footer data-role="footer" id="footer"></footer>
@@ -94,6 +124,7 @@
         $(document).horizon('scrollTo', 'section-section2');
     });
 </script>
+
 
 </body>
 </html>
