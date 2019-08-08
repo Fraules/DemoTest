@@ -403,13 +403,15 @@ h1 {
 }
 
 .panoramic {
-    width: 400px; height: 400px;
+    width: 400px; height: 200px;
     margin-bottom: 50px;
 	background: url('https://pp.userapi.com/c849232/v849232434/129937/eKh0wxvjun8.jpg');
 	background-size: auto 100%;	
 	animation: panoramic 5s linear infinite alternate;
     animation-play-state: paused;
     border-radius: 3px;
+	 margin-left: 50px;
+	
 }
 
 
