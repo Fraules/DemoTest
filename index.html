@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no, shrink-to-fit=no">
+    <meta name="google-site-verification" content="f8dUoWLbCQw2XVERgUo9SPEiSfYRcqKn1w8KAhvVEXI" />
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="script.js" type="text/js">
+    <script type="text/javascript" src="jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="jquery.touchSwipe.js"></script>
+    <script src="jquery.horizonScroll.js"></script>
+</head>
+<body>
+
+<header data-role="header" id="header">
+    <nav class="menu">
+        <ul>
+            <li >
+                <a  href="#section-section1"></a>
+            </li>
+
+            <li >
+                <a href="#section-section2"  ></a>
+            </li>
+            <li>
+                <a href="#section-section3"  ></a>
+            </li>
+            <li>
+                <a href="#section-section4"  ></a>
+            </li>
+            <li>
+                <a href="#section-section5" ></a>
+            </li>
+        </ul>
+    </nav>
+</header>
+  <!--<div class="horizon-prev"><img src="images/l-arrow.png"></div> 
+    <div class="horizon-next"><img src="images/r-arrow.png"></div>-->
+    <!-- content to be placed inside <body>…</body> -->
+<!--1-->    
+<section data-role="section" id="section-section1" class="section1">
+   <div class="smoke">
+                    <ul>
+                        <li>В</li>
+                        <li>Н</li>
+                        <li>И</li>
+                        <li>М</li>
+                        <li>А</li>
+                        <li>Т</li>
+                        <li>Е</li>
+                        <li>Л</li>
+                        <li>Ь</li>
+                        <li>Н</li>
+                        <li>О</li>
+                    </ul>
+    </div>  
+</div>
+</section>
+<!--2-->   
+<section data-role="section" id="section-section2">
+    <div class="title">
+        <h1>THE FRAAAAAU </h1>
+    </div>
+</section>
+<!--3-->  
+<section data-role="section" id="section-section3" class="section3">
+    <div  class="a-text" >
+            <p><strong>http://play.csssecrets.io/elastic</strong> Quite handy if you need the weight to change and you can even use keyframe animations or transitions with it. <strong>And you can revert to plain old font-weight for any browsers that don't support text-shadow, if you want to.</strong> It won't work with every font but is quite nice with most of the common ones.</p>
+    </div>
+</section>
+<!--4-->  
+<section data-role="section" id="section-section4" style="text-align: center" class="section4">
+    <div class="btn-1">
+     <a href="#" class="ripple btn">ГУД ФРЕШ</a>
+    </div>
+    <script>
+            $(".ripple").on("click",function(event){
+          $(this).append("<span class='ripple-effect'>");
+          $(this).find(".ripple-effect").css({
+              left:event.pageX-$(this).position().left,
+              top:event.pageY-$(this).position().top
+          }).animate({
+              opacity: 0,
+          }, 1500, function() {
+              $(this).remove();
+          });
+              });
+    </script>     
+    </div>             
+    <div class="path">
+            <img src="https://sun9-47.userapi.com/c849224/v849224912/15d231/oCXWTOJC1C0.jpg" class="avatar" />
+            <div class="panoramic"></div>    
+        </div>
+     
+</section>
+<!--5-->  
+<section data-role="section" id="section-section5" class="section5">
+    <div  class="a-text" >
+      <p></p>
+      </div>
+</section>
+
+ <!-- Check the elements for the dynamically added and removed will-change style -->
+<!-- <div class="container">
+    <button id="goAnimation">Run</button>
+  
+    <div class="mover" id="mover1">
+      <div>Animation</div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <button id="goTransition">Run</button>
+  
+    <div class="mover" id="mover2">
+      <div>Transition</div>
+    </div>
+  </div>
+  <script>
+  //https://dev.opera.com/articles/css-will-change-property/
+var m1 = document.getElementById('mover1');
+var bt1 = document.getElementById('goAnimation');
+m1.addEventListener("animationstart", hintBrowser, false);
+m1.addEventListener("animationiteration", logIteration, false);
+m1.addEventListener("animationend", removeHint, false);
+
+bt1.addEventListener("click", function() {
+  m1.classList.add('animateIt');
+  // hintBrowser();
+});
+//--------------------------------------------
+//--------------------------------------------
+//--------------------------------------------
+
+function logIteration() {
+  console.log(this.animationIterationCount); // undefined
+ // this.style.backgroundColor = "red";
+}
+
+var m2 = document.getElementById('mover2');
+var bt2 = document.getElementById('goTransition');
+// No "transitionstart" - so add transform explicitly on line 20
+m2.addEventListener("transitionend", removeHint, false);
+
+bt2.addEventListener("click", function() {
+  m2.style.willChange = 'transform';
+  if (m2.classList.contains('transitionRight')) {
+    m2.classList.remove('transitionRight');
+    m2.classList.add('transitionLeft');
+  }
+  else {
+    m2.classList.remove('transitionLeft');
+    m2.classList.add('transitionRight');
+  }
+});
+
+function hintBrowser() {
+  m1.style.willChange = 'transform, opacity';
+  console.log("willChange added");
+}
+function removeHint() {
+  this.style.willChange = 'auto';
+  m1.classList.remove('animateIt');
+  console.log("willChange removed");
+}
+  </script>
+ <div class="scene">
+    <div class="box">
+      <div class="box__face box__face--front">front</div>
+      <div class="box__face box__face--back">back</div>
+      <div class="box__face box__face--right">right</div>
+      <div class="box__face box__face--left">left</div>
+      <div class="box__face box__face--top">top</div>
+      <div class="box__face box__face--bottom">bottom</div>
+    </div>
+  </div>
+  <p class="radio-group">
+    <label>
+      <input type="radio" name="rotate-cube-side" value="front" checked /> front
+    </label>
+    <label>
+      <input type="radio" name="rotate-cube-side" value="right" /> right
+    </label>
+    <label>
+      <input type="radio" name="rotate-cube-side" value="back" /> back
+    </label>
+    <label>
+      <input type="radio" name="rotate-cube-side" value="left" /> left
+    </label>
+    <label>
+      <input type="radio" name="rotate-cube-side" value="top" /> top
+    </label>
+    <label>
+      <input type="radio" name="rotate-cube-side" value="bottom" /> bottom
+    </label>
+  </p>
+<script>var box = document.querySelector('.box');
+    var radioGroup = document.querySelector('.radio-group');
+    var currentClass = '';
+    
+    function changeSide() {
+      var checkedRadio = radioGroup.querySelector(':checked');
+      var showClass = 'show-' + checkedRadio.value;
+      if ( currentClass ) {
+        box.classList.remove( currentClass );
+      }
+      box.classList.add( showClass );
+      currentClass = showClass;
+    }
+    // set initial side
+    changeSide();
+    
+    radioGroup.addEventListener( 'change', changeSide );</script>  
+     -->
+  
+
+
+
+
+<script type="text/javascript">
+    // By default, swipe is enabled.
+    $('section').horizon();
+
+    // If you do not want to include another plugin, TouchSwipe, you can set it to false in the default options by passing in the option as false.
+    //$('section').horizon({swipe: false});
+
+    $(document).on('click', '.go-to-2', function () {
+        $(document).horizon('scrollTo', 'section-section2');
+    });
+</script>
+
+
+</body>
+</html>
