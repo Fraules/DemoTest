@@ -4,7 +4,7 @@ This is a jQuery plugin which allows for websites to page(scroll by set width) l
 
 Demo
 =======================
-Click here for the [demo](http://trgraglia.github.io/jquery.horizonScroll.js/demo/index.html)
+Click here for the [demo](https://fraules.github.io/Test/#section-section1)
 
 Usage
 =======================
