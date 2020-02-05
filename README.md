@@ -1,4 +1,4 @@
-| ОТКРЫТЬ  | Second Header |
+| ОТКРЫТЬ  | ОСНОВНАЯ ИДЕЯ |
 | ------------- | ------------- |
-| https://fraules.github.io/DemoTest/  | Content Cell  |
-| Content Cell  | Content Cell  |
+| https://fraules.github.io/DemoTest/  | Тест анимации скриптов  |
+| Сделано с помощью gquery  | Творческая тематика  |
