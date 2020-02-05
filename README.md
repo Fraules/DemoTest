@@ -1,4 +1,4 @@
-| First Header  | Second Header |
+| ОТКРЫТЬ  | Second Header |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
+| https://fraules.github.io/DemoTest/  | Content Cell  |
 | Content Cell  | Content Cell  |
