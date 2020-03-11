@@ -1,3 +1,23 @@
+@media screen and (max-width: 600px) {
+      #leftcol{
+      display: none;
+     }
+     #rightcol{
+      display: none;
+     }
+     
+    }
+.....
+@media screen and (max-width: 1220px) 
+        {
+           #content{ width:560px; position: relative; margin-left:220px; background:url(/images/content_back.jpg) #d4cd89; z-index:2; color:#1f1408;}
+          
+        }
+        @media screen and (max-width: 600px) 
+        {
+           #content{ width:360px; position: relative; background:url(/images/content_back.jpg) #d4cd89; z-index:2; color:#1f1408;}
+        }
+
 html, body {
     width: 100%; height: 100%;
     padding: 0;
@@ -603,3 +623,4 @@ h1 {
   label {
 
        margin-right: 10px; }
+
