@@ -41,7 +41,24 @@
     <div class="horizon-next"><img src="images/r-arrow.png"></div>-->
     <!-- content to be placed inside <body>…</body> -->
 <!--1-->    
-<section data-role="section" id="section-section1" class="section1"       <a  href="#section-section1" ></a>
+<section data-role="section" id="section-section1" class="section1"       
+	 <a  href="#section-section1" ></a>
+<p>
+  <b>Click</b> to change the <span id="tag">html</span>
+</p>
+<p>
+  to a <span id="text">text</span> node.
+</p>
+<p>
+  This <button name="nada">button</button> does nothing.
+</p>
+ 
+<script>
+$( "p" ).click(function() {
+  var htmlString = $( this ).html();
+  $( this ).text( htmlString );
+});
+</script>
  <!--   <div class="smoke">
    
                     <ul>
