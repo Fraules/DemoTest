@@ -80,7 +80,10 @@ li a{
    display: block;
 }
 
-
+li a {
+	width: 80px;
+    height: 20px;
+}
 
 section {
     float: left;
