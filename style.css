@@ -50,7 +50,6 @@ section, header, footer, nav, div, span, ul, li, a {
     box-sizing: border-box;
 }
 
-
 header {
     position: fixed;
     top: 0;
@@ -61,29 +60,25 @@ header {
     min-width: 469px;
 
 }
-header nav {
+header nav ul {
   display:flex ;
-
+ align-items: center;
 }
 
 
-
-ul {
-  display:flex ;
-  align-items: center;
-}
-li a {
+li a{
   width: 80px;
     height: 20px;
-    background: rgb(116, 116, 116);
     display: block;
-    border-radius: 90px;
+   
  
 }
   a {
-    margin: 10px;
+    margin: 13px;
   }
-
+.menu {
+   display: block;
+}
 
 
 
