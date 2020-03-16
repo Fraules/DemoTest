@@ -232,7 +232,7 @@ input:not(:focus) + .section1:not(:hover) {
 
 }
 
-h1 {
+h2 {
     background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
     background-size: cover;
     color: transparent;
