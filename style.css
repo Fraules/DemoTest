@@ -101,8 +101,7 @@ input:not(:focus) + .section1:not(:hover) {
 .section1 {
 	transition: .5s cubic-bezier(.25,.1,.3,1.5) transform;
 	transform-origin: 1.4em -.4em;
-	width: 1920px;
-}
+	
  
 #section-section1 {
     text-align: center;
@@ -113,7 +112,7 @@ input:not(:focus) + .section1:not(:hover) {
 }
 
 
-
+/* 
 .smoke {
     position: absolute;
     top: 50%;
@@ -194,7 +193,7 @@ input:not(:focus) + .section1:not(:hover) {
 .smoke ul li:nth-child(11) {
   animation-delay: 1s;
 }
-
+ */
 
 #section-section2 {
     transition: .5s cubic-bezier(.25,.1,.3,1.5) transform;
@@ -207,7 +206,7 @@ input:not(:focus) + .section1:not(:hover) {
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
-	width: 1920px;
+	
 }
 
 @keyframes gradientBG {
