@@ -9,44 +9,700 @@
     <script type="text/javascript" src="jquery-1.10.2.js"></script>
     <script type="text/javascript" src="jquery.touchSwipe.js"></script>
     <script src="jquery.horizonScroll.js"></script>
-	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+<style id="jsbin-css">
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@Fraules 
+Fraules
+/
+DemoTest
+0
+10
+ Code Issues 1 Pull requests 0 Actions Projects 1 Wiki Security Insights Settings
+DemoTest/style.css
+@Fraules Fraules Адаптиравано (style.css)
+79ea3c7 14 minutes ago
+626 lines (512 sloc)  11.8 KB
+  
+@media screen and (max-width: 600px) {
+      #leftcol{
+      display: none;
+     }
+     #rightcol{
+      display: none;
+     }
+     
+    }
+.....
+@media screen and (max-width: 1220px) 
+        {
+           #content{ width:560px; position: relative; margin-left:220px; background:url(/images/content_back.jpg) #d4cd89; z-index:2; color:#1f1408;}
+          
+        }
+        @media screen and (max-width: 600px) 
+        {
+           #content{ width:360px; position: relative; background:url(/images/content_back.jpg) #d4cd89; z-index:2; color:#1f1408;}
+        }
+
+html, body {
+    width: 100%; height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: Verdana, Geneva, sans-serif;
+   
+}
+
+html {
+	background: rgb(100%, 0%, 40%);
+	transition: 1s cubic-bezier(.25,.1,.2,3);
+}
+
+
+html:hover {
+	background: rgb(100%, 0%, 40%);
+}
+html:hover {
+    background: gray;
+    
+}
+
+/**
+ * Elastic color
+ */
+
+
+section, header, footer, nav, div, span, ul, li, a {
+    box-sizing: border-box;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #000000;
+    max-width: 1920px;
+    min-width: 469px;
+
+}
+header nav {
+  display:flex ;
+
+}
+
+
+
+ul {
+  display:flex ;
+  align-items: center;
+}
+li a {
+  width: 80px;
+    height: 20px;
+    background: rgb(116, 116, 116);
+    display: block;
+    border-radius: 90px;
+ 
+}
+  a {
+    margin: 10px;
+  }
+
+
+
+
+section {
+    float: left;
+    display: block;
+    width: 100%;
+   height: 100%;
+    padding: 75px 0 0 0;
+
+}
+input:not(:focus) + .section1:not(:hover) {
+	transform: scale(0);
+	transition: .25s transform;
+}
+
+.section1 {
+	transition: .5s cubic-bezier(.25,.1,.3,1.5) transform;
+	transform-origin: 1.4em -.4em;
+}
+ 
+#section-section1 {
+    text-align: center;
+    font-size: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    max-width: 100%;
+
+}
+
+
+
+.smoke {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    
+}
+.smoke ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  
+   
+}
+
+.smoke ul li {
+    list-style: none;
+    color: #000000;
+    font-size: 6em;
+    font-weight: bold;
+    /* letter-spacing: 0px; */
+    
+}
+
+.smoke ul:hover li {
+    animation: animate 1.5s  linear ;
+    
+    
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg) translateY(0px);
+        opacity: 0;
+        filter: blur(1px);
+        transition: opacity 1300ms
+    }
+    100% {
+        transform: rotate(45deg) translateY(-150px);
+        opacity: 1;
+        filter: blur(20px);
+
+    }
+}
+
+
+.smoke ul li:nth-child(1) {
+    animation-delay: 0s;
+}
+.smoke ul li:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.smoke ul li:nth-child(3) {
+    animation-delay: 0.2s;
+}
+.smoke ul li:nth-child(4) {
+    animation-delay: 0.3s;
+}
+.smoke ul li:nth-child(5) {
+    animation-delay: 0.4s;
+}
+.smoke ul li:nth-child(6) {
+    animation-delay: 0.5s;
+}
+.smoke ul li:nth-child(7) {
+    animation-delay: 0.6s;
+}
+.smoke ul li:nth-child(8) {
+    animation-delay: 0.7s;
+}
+.smoke ul li:nth-child(9) {
+  animation-delay:0.8s;
+}
+.smoke ul li:nth-child(10) {
+  animation-delay: 0.9s;
+}
+.smoke ul li:nth-child(11) {
+  animation-delay: 1s;
+}
+
+
+#section-section2 {
+    transition: .5s cubic-bezier(.25,.1,.3,1.5) transform;
+    transform-origin: 1.4em -.4em;
+    margin: 0;
+	width: 100%;
+	height: 100vh;
+	font-family: "Exo", sans-serif;
+	color: #fff;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.title {
+    text-align: top;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    
+
+}
+
+h1 {
+    background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    font-size: 120px;
+    line-height: .75;
+    margin: 10px 0;
+ 
+    
+}
+/* styling my button */
+
+.white-mode {
+    text-decoration: none;
+    padding: 7px 10px;
+    background-color: #122;
+    border-radius: 3px;
+    color: #FFF;
+    transition: .35s ease-in-out;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+}
+
+.white-mode:hover {
+    background-color: #FFF;
+    color: #122;
+}
+
+#section-section3 {
+    background: #27ae60;
+    
+}
+
+.a-text {
+    font-family:Georgia;
+    font-size:2em;
+    margin:2em;
+  }
+  
+  strong {
+    animation:shadowOff 5s ease-in-out infinite alternate;
+    font-weight:normal;
+    text-shadow:.02em 0 currentColor, -.02em 0 currentColor;
+  }
+  
+  @keyframes shadowOff {
+    to {
+      text-shadow:0 0 currentColor;
+    }
+  }
+
+
+
+#section-section4 {
+    background: #6ee2ff;
+    
+}
+
+
+.heading {
+    text-align: center;
+    font-size: 15px;
+    color: #000000;
+    margin-left: 300px;
+}
+
+
+
+.btn {
+    display: inline-block;
+    padding:  15px 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: auto;
+    text-decoration: none;
+    width: 300px;
+    height: 45px;
+    font-size: 14px;
+   text-align: center;
+   
+}
+
+
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.ripple-effect {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    border: 2px solid #62d62c;;
+    border-radius: 5000px;
+    animation: ripple 1s ease forwards;
+    z-index: 1;
+}
+
+
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(100);
+    }
+}
+
+/**
+ * Animation along a circular path - Solution 2
+ */
+ 
+ @keyframes spin {
+	from {
+		transform: rotate(0turn)
+		           translateY(-150px) translateY(50%)
+		           rotate(1turn)
+	}
+	to {
+		transform: rotate(1turn)
+		           translateY(-150px) translateY(50%)
+		           rotate(0turn);
+	}
+}
+
+
+.avatar {
+	animation: spin 2s infinite linear;
+}
+
+/* Anything below this is just styling */
+
+.avatar {
+	display: block;
+	width: 50px; height: 50px;
+	margin: calc(50% - 25px) auto 0;
+	border-radius: 100%;
+	overflow: hidden;
+}
+
+.path {
+	width: 300px; height: 300px;
+	padding: 20px;
+	margin: 100px auto;
+	border-radius: 50%;
+    background: rgb(255, 51, 95);
+    transition: transform 1s ease-out;  
+}
+    .path:hover{
+        transform: scale(1.5);
+}
+
+/**
+ * Smooth state animations
+ * Photo credits: https://www.flickr.com/photos/employtheskinnyboy/3904743709
+ */
+
+ @keyframes panoramic {
+	to { background-position: 100% 0; }
+}
+
+.panoramic {
+    width: 200px; height: 200px;
+    margin: 100% auto ;
+    margin-top: -125px;
+	background: url('https://pp.userapi.com/c849232/v849232434/129937/eKh0wxvjun8.jpg');
+    background-size: auto 100%;	
+	animation: panoramic 5s linear infinite alternate;
+    animation-play-state: paused;
+    border-radius: 100%;
+    
+}
+.panoramic:hover, .panoramic:focus {
+    animation-play-state: running;
+    
+}
+
+#section-section5 {
+    margin: 0;
+	width: 100%;
+	height: 100vh;
+	font-family: "Exo", sans-serif;
+	color: #fff;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.container {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+  }
+  
+  .mover {
+    margin-left: 1rem;
+    padding: 0.2rem 0.5rem 0;
+    float: left;
+    height: 3.5rem;
+    width: 10rem;
+    background: #090909;
+    border-radius: 0.5rem;
+    border: 0.2rem solid orange;
+    text-align: center;
+  }
+  .mover div {
+    font-size: 1.5rem;
+    color: #ffd280;
+    font-family: "Work Sans", sans-serif;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+  
+  button {
+    float: left;
+    font-size: 1.5rem;
+    font-family: "Work Sans", sans-serif;
+    height: 4rem;
+    width: 8rem;
+    background-color: orange;
+    border: 0;
+  }
+  
+  .transitionRight {
+    opacity: 0.2;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease, -webkit-transform 0.5s ease;
+  }
+  
+  .transitionLeft {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease, -webkit-transform 0.5s ease;
+  }
+  
+  .animateIt {
+    -webkit-animation: moveAndOpacity 1.5s ease 2;
+            animation: moveAndOpacity 1.5s ease 2;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  
+  @-webkit-keyframes moveAndOpacity {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+    50% {
+      -webkit-transform: translateX(10rem);
+              transform: translateX(10rem);
+      opacity: 0.1;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes moveAndOpacity {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+    50% {
+      -webkit-transform: translateX(10rem);
+              transform: translateX(10rem);
+      opacity: 0.1;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  div.scene {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #CCC;
+    margin: 80px;
+    perspective: 400px;
+  }
+  
+  .box {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-50px);
+    transition: transform 1s;
+    
+    
+  }
+  
+  .box.show-front  { transform: translateZ( -50px) rotateY(   0deg); }
+  .box.show-back   { transform: translateZ( -50px) rotateY(-180deg); }
+  .box.show-right  { transform: translateZ(-150px) rotateY( -90deg); }
+  .box.show-left   { transform: translateZ(-150px) rotateY(  90deg); }
+  .box.show-top    { transform: translateZ(-100px) rotateX( -90deg); }
+  .box.show-bottom { transform: translateZ(-100px) rotateX(  90deg); }
+  
+  
+  .box__face {
+    position: absolute;
+    border: 2px solid black;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+  
+  .box__face--front,
+  .box__face--back {
+    width: 300px;
+    height: 200px;
+    line-height: 200px;
+  }
+  
+  .box__face--right,
+  .box__face--left {
+    width: 100px;
+    height: 200px;
+    left: 100px;
+    line-height: 200px;
+  }
+  
+  .box__face--top,
+  .box__face--bottom {
+    width: 300px;
+    height: 100px;
+    top: 50px;
+    line-height: 100px;
+  }
+  
+  .box__face--front  { background: hsla(  0, 100%, 50%, 0.7); }
+  .box__face--right  { background: hsla( 60, 100%, 50%, 0.7); }
+  .box__face--back   { background: hsla(120, 100%, 50%, 0.7); }
+  .box__face--left   { background: hsla(180, 100%, 50%, 0.7); }
+  .box__face--top    { background: hsla(240, 100%, 50%, 0.7); }
+  .box__face--bottom { background: hsla(300, 100%, 50%, 0.7); }
+  
+  .box__face--front  { transform: rotateY(  0deg) translateZ( 50px); }
+  .box__face--back   { transform: rotateY(180deg) translateZ( 50px); }
+  
+  .box__face--right  { transform: rotateY( 90deg) translateZ(150px); }
+  .box__face--left   { transform: rotateY(-90deg) translateZ(150px); }
+  
+  .box__face--top    { transform: rotateX( 90deg) translateZ(100px); }
+  .box__face--bottom { transform: rotateX(-90deg) translateZ(100px); }
+  
+  label {
+
+       margin-right: 10px; }
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+</style>
 </head>
 <body>
 
 <header data-role="header" id="header">
-
     <nav class="menu">
         <ul>
-            <li > 
-                <a  href="#section-section1" class="section1">🍰</a>
-             </li>
+            <li id ="section-section1">
+                
+                <a  href="#section-section1" ></a>
+                
+            </li>
 
-            <li class="section2">
-                <a href="#section-section2" class="section2" > 🧀</a>
-            </li>
-          
-            <li > 
-                <a href="#section-section3"  class="section3">🌵</a>
-            </li>
-            <li >  
-                <a href="#section-section4" class="section3" >💔</a>
+            <li >
+                <a href="#section-section2"  ></a>
             </li>
             <li>
-                <a href="#section-section5" class="section3" >🧠</a>
+                <a href="#section-section3"  ></a>
+            </li>
+            <li>
+                <a href="#section-section4"  ></a>
+            </li>
+            <li>
+                <a href="#section-section5" ></a>
             </li>
         </ul>
     </nav>
-  </div>
 </header>
   <!--<div class="horizon-prev"><img src="images/l-arrow.png"></div> 
     <div class="horizon-next"><img src="images/r-arrow.png"></div>-->
     <!-- content to be placed inside <body>…</body> -->
 <!--1-->    
-<section data-role="section" id="section-section1" class="section1"  >     
-	 <a  href="#section-section1" ></a>
+<section data-role="section" id="section-section1" class="section1"       <a  href="#section-section1" ></a>
+   <div class="smoke">
+            <a  ></a>
 
-  <!--<div class="smoke">
-   
                     <ul>
                         <li>В</li>
                         <li>Н</li>
@@ -60,14 +716,18 @@
                         <li>Н</li>
                         <li>О</li>
                     </ul>
-    </div>  -->
-    
+    </div>  
 
-
+</div>
+</section>
 <!--2-->   
-<section data-role="section" id="section-section2" class="section2" >
-    <div class="section2">
-        <h2>THE FRAAAAAU </h2>
+<section data-role="section" id="section-section2">
+    <div class="title">
+        <h1>THE FRAAAAAU </h1>
+    </div>
+    <div>
+        
+
     </div>
 </section>
 <!--3-->  
@@ -111,7 +771,9 @@
 </section>
 <!--5-->  
 <section data-role="section" id="section-section5" class="section5">
-   <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="ru_RU" data-type="vertical" data-theme="light" data-vanity="thefraules"><a class="LI-simple-link" href='https://ru.linkedin.com/in/thefraules?trk=profile-badge'>Olesya Kovaleva</a></div>
+    <div  class="a-text" >
+      <p></p>
+      </div>
 </section>
 
 
@@ -129,5 +791,826 @@
 </script>
 
 
+<script id="jsbin-javascript">
+// 📁 sayHi.js
+export function sayHi(user) {
+  alert(`Hello, ${user}!`);
+}
+
+
+// 📁 main.js
+import {sayHi} from './sayHi.js';
+
+alert(sayHi); // function...
+sayHi('John'); // Hello, John!
+</script>
+
+<script id="jsbin-source-html" type="text/html"><!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no, shrink-to-fit=no">
+    <meta name="google-site-verification" content="f8dUoWLbCQw2XVERgUo9SPEiSfYRcqKn1w8KAhvVEXI" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="script.js" type="text/js">
+    <script type="text/javascript" src="jquery-1.10.2.js"><\/script>
+    <script type="text/javascript" src="jquery.touchSwipe.js"><\/script>
+    <script src="jquery.horizonScroll.js"><\/script>
+</head>
+<body>
+
+<header data-role="header" id="header">
+    <nav class="menu">
+        <ul>
+            <li id ="section-section1">
+                
+                <a  href="#section-section1" ></a>
+                
+            </li>
+
+            <li >
+                <a href="#section-section2"  ></a>
+            </li>
+            <li>
+                <a href="#section-section3"  ></a>
+            </li>
+            <li>
+                <a href="#section-section4"  ></a>
+            </li>
+            <li>
+                <a href="#section-section5" ></a>
+            </li>
+        </ul>
+    </nav>
+</header>
+  <\!--<div class="horizon-prev"><img src="images/l-arrow.png"></div> 
+    <div class="horizon-next"><img src="images/r-arrow.png"></div>-->
+    <\!-- content to be placed inside <body>…</body> -->
+<\!--1-->    
+<section data-role="section" id="section-section1" class="section1"       <a  href="#section-section1" ></a>
+   <div class="smoke">
+            <a  ></a>
+
+                    <ul>
+                        <li>В</li>
+                        <li>Н</li>
+                        <li>И</li>
+                        <li>М</li>
+                        <li>А</li>
+                        <li>Т</li>
+                        <li>Е</li>
+                        <li>Л</li>
+                        <li>Ь</li>
+                        <li>Н</li>
+                        <li>О</li>
+                    </ul>
+    </div>  
+
+</div>
+</section>
+<\!--2-->   
+<section data-role="section" id="section-section2">
+    <div class="title">
+        <h1>THE FRAAAAAU </h1>
+    </div>
+    <div>
+        
+
+    </div>
+</section>
+<\!--3-->  
+<section data-role="section" id="section-section3" class="section3">
+    <div  class="a-text" >
+            <p>
+                <strong>Текст есть то, что он есть, а именно и исключительно текст, безразличный к тому, 
+                    чем "наполняют" его толкование</strong>
+                Текст есть феномен, рассчитанный и исключительно на чтение: его 
+                "адекватное понимание " (как сведение смысла к набору формулировок) невозможно.
+                <strong>Текст не имеет никаких обязательств: ни перед автором, ни перед читателем, ни перед самим собой.</strong>
+                copyright.2019 </p>
+        
+<dgraffiti (3).svg
+    </div>
+</section>
+<\!--4-->  
+<section data-role="section" id="section-section4" style="text-align: center" class="section4">
+    <div class="btn-1">
+     <a href="#" class="ripple btn">ГУД ФРЕШ</a>
+    </div>
+    <script>
+            $(".ripple").on("click",function(event){
+          $(this).append("<span class='ripple-effect'>");
+          $(this).find(".ripple-effect").css({
+              left:event.pageX-$(this).position().left,
+              top:event.pageY-$(this).position().top
+          }).animate({
+              opacity: 0,
+          }, 1500, function() {
+              $(this).remove();
+          });
+              });
+    <\/script>     
+    </div>             
+    <div class="path">
+            <img src="https://sun9-47.userapi.com/c849224/v849224912/15d231/oCXWTOJC1C0.jpg" class="avatar" />
+            <div class="panoramic"></div>    
+        </div>
+     
+</section>
+<\!--5-->  
+<section data-role="section" id="section-section5" class="section5">
+    <div  class="a-text" >
+      <p></p>
+      </div>
+</section>
+
+
+<script type="text/javascript">
+    // By default, swipe is enabled.
+    $('section').horizon();
+
+    // If you do not want to include another plugin, TouchSwipe, you can set it to false in the default options by passing in the option as false.
+    //$('section').horizon({swipe: false});
+
+    $(document).on('click', '.go-to-2', function () {
+        $(document).horizon('scrollTo', 'section-section2');
+    });
+	
+<\/script>
+
+
 </body>
+</html>
+</script>
+
+<script id="jsbin-source-css" type="text/css">Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@Fraules 
+Fraules
+/
+DemoTest
+0
+10
+ Code Issues 1 Pull requests 0 Actions Projects 1 Wiki Security Insights Settings
+DemoTest/style.css
+@Fraules Fraules Адаптиравано (style.css)
+79ea3c7 14 minutes ago
+626 lines (512 sloc)  11.8 KB
+  
+@media screen and (max-width: 600px) {
+      #leftcol{
+      display: none;
+     }
+     #rightcol{
+      display: none;
+     }
+     
+    }
+.....
+@media screen and (max-width: 1220px) 
+        {
+           #content{ width:560px; position: relative; margin-left:220px; background:url(/images/content_back.jpg) #d4cd89; z-index:2; color:#1f1408;}
+          
+        }
+        @media screen and (max-width: 600px) 
+        {
+           #content{ width:360px; position: relative; background:url(/images/content_back.jpg) #d4cd89; z-index:2; color:#1f1408;}
+        }
+
+html, body {
+    width: 100%; height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: Verdana, Geneva, sans-serif;
+   
+}
+
+html {
+	background: rgb(100%, 0%, 40%);
+	transition: 1s cubic-bezier(.25,.1,.2,3);
+}
+
+
+html:hover {
+	background: rgb(100%, 0%, 40%);
+}
+html:hover {
+    background: gray;
+    
+}
+
+/**
+ * Elastic color
+ */
+
+
+section, header, footer, nav, div, span, ul, li, a {
+    box-sizing: border-box;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #000000;
+    max-width: 1920px;
+    min-width: 469px;
+
+}
+header nav {
+  display:flex ;
+
+}
+
+
+
+ul {
+  display:flex ;
+  align-items: center;
+}
+li a {
+  width: 80px;
+    height: 20px;
+    background: rgb(116, 116, 116);
+    display: block;
+    border-radius: 90px;
+ 
+}
+  a {
+    margin: 10px;
+  }
+
+
+
+
+section {
+    float: left;
+    display: block;
+    width: 100%;
+   height: 100%;
+    padding: 75px 0 0 0;
+
+}
+input:not(:focus) + .section1:not(:hover) {
+	transform: scale(0);
+	transition: .25s transform;
+}
+
+.section1 {
+	transition: .5s cubic-bezier(.25,.1,.3,1.5) transform;
+	transform-origin: 1.4em -.4em;
+}
+ 
+#section-section1 {
+    text-align: center;
+    font-size: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    max-width: 100%;
+
+}
+
+
+
+.smoke {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    
+}
+.smoke ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  
+   
+}
+
+.smoke ul li {
+    list-style: none;
+    color: #000000;
+    font-size: 6em;
+    font-weight: bold;
+    /* letter-spacing: 0px; */
+    
+}
+
+.smoke ul:hover li {
+    animation: animate 1.5s  linear ;
+    
+    
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg) translateY(0px);
+        opacity: 0;
+        filter: blur(1px);
+        transition: opacity 1300ms
+    }
+    100% {
+        transform: rotate(45deg) translateY(-150px);
+        opacity: 1;
+        filter: blur(20px);
+
+    }
+}
+
+
+.smoke ul li:nth-child(1) {
+    animation-delay: 0s;
+}
+.smoke ul li:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.smoke ul li:nth-child(3) {
+    animation-delay: 0.2s;
+}
+.smoke ul li:nth-child(4) {
+    animation-delay: 0.3s;
+}
+.smoke ul li:nth-child(5) {
+    animation-delay: 0.4s;
+}
+.smoke ul li:nth-child(6) {
+    animation-delay: 0.5s;
+}
+.smoke ul li:nth-child(7) {
+    animation-delay: 0.6s;
+}
+.smoke ul li:nth-child(8) {
+    animation-delay: 0.7s;
+}
+.smoke ul li:nth-child(9) {
+  animation-delay:0.8s;
+}
+.smoke ul li:nth-child(10) {
+  animation-delay: 0.9s;
+}
+.smoke ul li:nth-child(11) {
+  animation-delay: 1s;
+}
+
+
+#section-section2 {
+    transition: .5s cubic-bezier(.25,.1,.3,1.5) transform;
+    transform-origin: 1.4em -.4em;
+    margin: 0;
+	width: 100%;
+	height: 100vh;
+	font-family: "Exo", sans-serif;
+	color: #fff;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.title {
+    text-align: top;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    
+
+}
+
+h1 {
+    background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    font-size: 120px;
+    line-height: .75;
+    margin: 10px 0;
+ 
+    
+}
+/* styling my button */
+
+.white-mode {
+    text-decoration: none;
+    padding: 7px 10px;
+    background-color: #122;
+    border-radius: 3px;
+    color: #FFF;
+    transition: .35s ease-in-out;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+}
+
+.white-mode:hover {
+    background-color: #FFF;
+    color: #122;
+}
+
+#section-section3 {
+    background: #27ae60;
+    
+}
+
+.a-text {
+    font-family:Georgia;
+    font-size:2em;
+    margin:2em;
+  }
+  
+  strong {
+    animation:shadowOff 5s ease-in-out infinite alternate;
+    font-weight:normal;
+    text-shadow:.02em 0 currentColor, -.02em 0 currentColor;
+  }
+  
+  @keyframes shadowOff {
+    to {
+      text-shadow:0 0 currentColor;
+    }
+  }
+
+
+
+#section-section4 {
+    background: #6ee2ff;
+    
+}
+
+
+.heading {
+    text-align: center;
+    font-size: 15px;
+    color: #000000;
+    margin-left: 300px;
+}
+
+
+
+.btn {
+    display: inline-block;
+    padding:  15px 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: auto;
+    text-decoration: none;
+    width: 300px;
+    height: 45px;
+    font-size: 14px;
+   text-align: center;
+   
+}
+
+
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.ripple-effect {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    border: 2px solid #62d62c;;
+    border-radius: 5000px;
+    animation: ripple 1s ease forwards;
+    z-index: 1;
+}
+
+
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(100);
+    }
+}
+
+/**
+ * Animation along a circular path - Solution 2
+ */
+ 
+ @keyframes spin {
+	from {
+		transform: rotate(0turn)
+		           translateY(-150px) translateY(50%)
+		           rotate(1turn)
+	}
+	to {
+		transform: rotate(1turn)
+		           translateY(-150px) translateY(50%)
+		           rotate(0turn);
+	}
+}
+
+
+.avatar {
+	animation: spin 2s infinite linear;
+}
+
+/* Anything below this is just styling */
+
+.avatar {
+	display: block;
+	width: 50px; height: 50px;
+	margin: calc(50% - 25px) auto 0;
+	border-radius: 100%;
+	overflow: hidden;
+}
+
+.path {
+	width: 300px; height: 300px;
+	padding: 20px;
+	margin: 100px auto;
+	border-radius: 50%;
+    background: rgb(255, 51, 95);
+    transition: transform 1s ease-out;  
+}
+    .path:hover{
+        transform: scale(1.5);
+}
+
+/**
+ * Smooth state animations
+ * Photo credits: https://www.flickr.com/photos/employtheskinnyboy/3904743709
+ */
+
+ @keyframes panoramic {
+	to { background-position: 100% 0; }
+}
+
+.panoramic {
+    width: 200px; height: 200px;
+    margin: 100% auto ;
+    margin-top: -125px;
+	background: url('https://pp.userapi.com/c849232/v849232434/129937/eKh0wxvjun8.jpg');
+    background-size: auto 100%;	
+	animation: panoramic 5s linear infinite alternate;
+    animation-play-state: paused;
+    border-radius: 100%;
+    
+}
+.panoramic:hover, .panoramic:focus {
+    animation-play-state: running;
+    
+}
+
+#section-section5 {
+    margin: 0;
+	width: 100%;
+	height: 100vh;
+	font-family: "Exo", sans-serif;
+	color: #fff;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.container {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+  }
+  
+  .mover {
+    margin-left: 1rem;
+    padding: 0.2rem 0.5rem 0;
+    float: left;
+    height: 3.5rem;
+    width: 10rem;
+    background: #090909;
+    border-radius: 0.5rem;
+    border: 0.2rem solid orange;
+    text-align: center;
+  }
+  .mover div {
+    font-size: 1.5rem;
+    color: #ffd280;
+    font-family: "Work Sans", sans-serif;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+  
+  button {
+    float: left;
+    font-size: 1.5rem;
+    font-family: "Work Sans", sans-serif;
+    height: 4rem;
+    width: 8rem;
+    background-color: orange;
+    border: 0;
+  }
+  
+  .transitionRight {
+    opacity: 0.2;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease, -webkit-transform 0.5s ease;
+  }
+  
+  .transitionLeft {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease, -webkit-transform 0.5s ease;
+  }
+  
+  .animateIt {
+    -webkit-animation: moveAndOpacity 1.5s ease 2;
+            animation: moveAndOpacity 1.5s ease 2;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  
+  @-webkit-keyframes moveAndOpacity {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+    50% {
+      -webkit-transform: translateX(10rem);
+              transform: translateX(10rem);
+      opacity: 0.1;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes moveAndOpacity {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+    50% {
+      -webkit-transform: translateX(10rem);
+              transform: translateX(10rem);
+      opacity: 0.1;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  div.scene {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #CCC;
+    margin: 80px;
+    perspective: 400px;
+  }
+  
+  .box {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-50px);
+    transition: transform 1s;
+    
+    
+  }
+  
+  .box.show-front  { transform: translateZ( -50px) rotateY(   0deg); }
+  .box.show-back   { transform: translateZ( -50px) rotateY(-180deg); }
+  .box.show-right  { transform: translateZ(-150px) rotateY( -90deg); }
+  .box.show-left   { transform: translateZ(-150px) rotateY(  90deg); }
+  .box.show-top    { transform: translateZ(-100px) rotateX( -90deg); }
+  .box.show-bottom { transform: translateZ(-100px) rotateX(  90deg); }
+  
+  
+  .box__face {
+    position: absolute;
+    border: 2px solid black;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+  
+  .box__face--front,
+  .box__face--back {
+    width: 300px;
+    height: 200px;
+    line-height: 200px;
+  }
+  
+  .box__face--right,
+  .box__face--left {
+    width: 100px;
+    height: 200px;
+    left: 100px;
+    line-height: 200px;
+  }
+  
+  .box__face--top,
+  .box__face--bottom {
+    width: 300px;
+    height: 100px;
+    top: 50px;
+    line-height: 100px;
+  }
+  
+  .box__face--front  { background: hsla(  0, 100%, 50%, 0.7); }
+  .box__face--right  { background: hsla( 60, 100%, 50%, 0.7); }
+  .box__face--back   { background: hsla(120, 100%, 50%, 0.7); }
+  .box__face--left   { background: hsla(180, 100%, 50%, 0.7); }
+  .box__face--top    { background: hsla(240, 100%, 50%, 0.7); }
+  .box__face--bottom { background: hsla(300, 100%, 50%, 0.7); }
+  
+  .box__face--front  { transform: rotateY(  0deg) translateZ( 50px); }
+  .box__face--back   { transform: rotateY(180deg) translateZ( 50px); }
+  
+  .box__face--right  { transform: rotateY( 90deg) translateZ(150px); }
+  .box__face--left   { transform: rotateY(-90deg) translateZ(150px); }
+  
+  .box__face--top    { transform: rotateX( 90deg) translateZ(100px); }
+  .box__face--bottom { transform: rotateX(-90deg) translateZ(100px); }
+  
+  label {
+
+       margin-right: 10px; }
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+</script>
+
+<script id="jsbin-source-javascript" type="text/javascript">// 📁 sayHi.js
+export function sayHi(user) {
+  alert(`Hello, ${user}!`);
+}
+
+
+// 📁 main.js
+import {sayHi} from './sayHi.js';
+
+alert(sayHi); // function...
+sayHi('John'); // Hello, John!</script></body>
 </html>
